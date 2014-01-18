@@ -32,7 +32,7 @@ function whichTransitionEvent(el){
 
 function touchDownHandle(event){
 	event.preventDefault();
-	console.log("touch start");
+	//console.log("touch start");
 	pageNavigatorTouch.startTimer = Date.now();
 	$("pagenavigator").removeClass("slide-animation");
 	pageNavigatorTouch.start = event.originalEvent.touches[0];
@@ -41,10 +41,10 @@ function touchDownHandle(event){
 };
 
 function touchMoveHandle(event){
-	//console.log("touch move");
+	////console.log("touch move");
 	pageNavigatorTouch.end = event.originalEvent.touches[0];
 	movePercent = ((pageNavigatorTouch.end.pageX - pageNavigatorTouch.start.pageX) / viewport.width) * 100;
-	//console.log("=> movePercent : ", movePercent);
+	////console.log("=> movePercent : ", movePercent);
 	$("pagenavigator").css({
 		"-webkit-transform": "translate3d("+ (movePercent/3) +"% ,0,0)",
 		"transform": "translate3d("+ (movePercent/3) +"% ,0,0)"
@@ -53,11 +53,11 @@ function touchMoveHandle(event){
 };
 
 function touchUpHandle(event){
-	console.log("touch end")
+	//console.log("touch end")
 	movePercent = ((pageNavigatorTouch.end.pageX - pageNavigatorTouch.start.pageX) / viewport.width) * 100;
 	//swipe or slide
 	isSwipe = (Date.now() - pageNavigatorTouch.startTimer) < 250 ? true : false;
-	//console.log("=> movePercent : ", movePercent);
+	////console.log("=> movePercent : ", movePercent);
 	$("pagenavigator").addClass("slide-animation");
 	if (Math.abs(movePercent) < 50){
 		if(isSwipe){
@@ -90,15 +90,15 @@ function pageSlideReset(){
 	});
 }
 function pageSlideLeft(){
-	console.log('slideLeft');
-	(document.getElementById('pagenavigator')).addEventListener(window.transitionEnd, function(event){
-		console.log("addeventlistener transition ended");
+	////console.log('slideLeft');
+/*	(document.getElementById('pagenavigator')).addEventListener(window.transitionEnd, function(event){
+		////console.log("addeventlistener transition ended");
 		var nextCard = $("#nextCardHolder div").data("cardInfo");
 		showCard(nextCard);
-	}, false);
+	}, false);*/
 	
 	$("pagenavigator").one(window.transitionEnd, function(event){
-		console.log("transition ended");
+		//console.log("transition ended");
 		var nextCard = $("#nextCardHolder div").data("cardInfo");
 		showCard(nextCard);
 	}).css({
@@ -108,12 +108,12 @@ function pageSlideLeft(){
 		"-ms-transform": "translate3d(-33.3%,0,0)",
 		"-o-transform": "translate3d(-33.3%,0,0)"
 	});
-	console.log('slideLeft: end');
+	//console.log('slideLeft: end');
 }
 function pageSlideRight(){
-	console.log('slideRight');
+	//console.log('slideRight');
 	$("pagenavigator").one(window.transitionEnd, function(event){
-		console.log("transition ended");
+		//console.log("transition ended");
 		var previousCard = $("#previousCardHolder div").data("cardInfo");
 		showCard(previousCard);
 	}).css({
@@ -126,9 +126,9 @@ function pageSlideRight(){
 }
 function loadCards(){
 	$.getJSON("data/data.json",function(data){
-		console.log("success loading data")
+		//console.log("success loading data")
 		try{
-			console.log(data.kaarten.length + "cards loaded");
+			//console.log(data.kaarten.length + "cards loaded");
 			cards = data.kaarten;
 			//setupNavigation();
 			processCardData();
@@ -143,13 +143,13 @@ function loadCards(){
 }
 
 function showCard(cardInfo){
-	console.log("showCard");
+	//console.log("showCard");
 	var mainCardIndex		= cards.indexOf(cardInfo),
 		nextCardIndex 		= mainCardIndex+1 > cards.length ? -1 : mainCardIndex+1,
 		previousCardIndex 	= mainCardIndex-1;
 	
 	$("pagenavigator").removeClass("slide-animation"); //disable animation
-	//console.log("showCards : ", previousIndex, mainIndex, nextIndex);
+	////console.log("showCards : ", previousIndex, mainIndex, nextIndex);
 	switch (cardInfo){
 		case $("#nextCardHolder").data("cardInfo"):		//next card is selected
 				$("#preloader").append($("#previous div"));	//store in carddeck
@@ -184,7 +184,7 @@ function showCard(cardInfo){
 }
 
 function processCardData(){
-	console.log('processCardData')
+	//console.log('processCardData')
 	var prevCardId = "", nextCardId = "";
 	$.each(cards, function(index, value){
 		if(index != cards.length-1){
@@ -200,7 +200,7 @@ function processCardData(){
 	showCard(cards[0]);
 };
 function addCardlinkToNavigation(card){
-	console.log('addCardlinkToNavigation')
+	//console.log('addCardlinkToNavigation')
 
 	$( "<li><a href='#"+card.id+"'>"+card.id+"</a></li>" ).appendTo( "#cardsnavigation ul" );
 	$("<div id='"+card.id+"' class='block' style='background-image:url("+card.image+")'>").appendTo("#preloader");
