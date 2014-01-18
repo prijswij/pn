@@ -9,7 +9,7 @@ $(function(){
 		startTimer	: null
 	};
 	$("pagenavigator").on("touchstart", touchDownHandle);
-	windows.transitionEnd = whichTransitionEvent(document.getElementById('pagenavigator'));
+	window.transitionEnd = whichTransitionEvent(document.getElementById('pagenavigator'));
 	loadCards();
 	
 });
@@ -86,7 +86,7 @@ function pageSlideReset(){
 }
 function pageSlideLeft(){
 	console.log('slideLeft');
-	$("pagenavigator").one(windows.transitionEnd, function(event){
+	$("pagenavigator").one(window.transitionEnd, function(event){
 		console.log("transition ended");
 		var nextCard = $("#nextCardHolder div").data("cardInfo");
 		showCard(nextCard);
@@ -96,7 +96,7 @@ function pageSlideLeft(){
 }
 function pageSlideRight(){
 	console.log('slideRight');
-	$("pagenavigator").one(windows.transitionEnd, function(event){
+	$("pagenavigator").one(window.transitionEnd, function(event){
 		console.log("transition ended");
 		var previousCard = $("#previousCardHolder div").data("cardInfo");
 		showCard(previousCard);
