@@ -31,6 +31,7 @@ function whichTransitionEvent(el){
 }
 
 function touchDownHandle(event){
+	event.stopPropagation();
 	event.preventDefault();
 	//console.log("touch start");
 	pageNavigatorTouch.startTimer = Date.now();
@@ -41,6 +42,8 @@ function touchDownHandle(event){
 };
 
 function touchMoveHandle(event){
+	event.stopPropagation();
+	event.preventDefault();
 	////console.log("touch move");
 	pageNavigatorTouch.end = event.originalEvent.touches[0];
 	movePercent = ((pageNavigatorTouch.end.pageX - pageNavigatorTouch.start.pageX) / viewport.width) * 100;
@@ -53,6 +56,8 @@ function touchMoveHandle(event){
 };
 
 function touchUpHandle(event){
+	event.stopPropagation();
+	event.preventDefault();
 	//console.log("touch end")
 	movePercent = ((pageNavigatorTouch.end.pageX - pageNavigatorTouch.start.pageX) / viewport.width) * 100;
 	//swipe or slide
@@ -98,6 +103,8 @@ function pageSlideLeft(){
 	}, false);*/
 	
 	$("pagenavigator").one(window.transitionEnd, function(event){
+		event.stopPropagation();
+		event.preventDefault();
 		//console.log("transition ended");
 		var nextCard = $("#nextCardHolder div").data("cardInfo");
 		showCard(nextCard);
@@ -113,6 +120,8 @@ function pageSlideLeft(){
 function pageSlideRight(){
 	//console.log('slideRight');
 	$("pagenavigator").one(window.transitionEnd, function(event){
+		event.stopPropagation();
+		event.preventDefault();
 		//console.log("transition ended");
 		var previousCard = $("#previousCardHolder div").data("cardInfo");
 		showCard(previousCard);
