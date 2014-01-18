@@ -46,7 +46,8 @@ function touchMoveHandle(event){
 	movePercent = ((pageNavigatorTouch.end.pageX - pageNavigatorTouch.start.pageX) / viewport.width) * 100;
 	//console.log("=> movePercent : ", movePercent);
 	$("pagenavigator").css({
-		"-webkit-transform": "translate3d("+ (movePercent/3) +"% ,0,0)"
+		"-webkit-transform": "translate3d("+ (movePercent/3) +"% ,0,0)",
+		"transform": "translate3d("+ (movePercent/3) +"% ,0,0)"
 		//left : -100 + movePercent +"%"
 	});
 };
@@ -81,7 +82,8 @@ function preformPageSlide(movePercent){
 
 function pageSlideReset(){
 	$("pagenavigator").css({
-		"-webkit-transform": "translate3d(0%,0,0)"
+		"-webkit-transform": "translate3d(0%,0,0)",
+		"transform": "translate3d(0%,0,0)"
 	});
 }
 function pageSlideLeft(){
@@ -97,7 +99,8 @@ function pageSlideLeft(){
 		var nextCard = $("#nextCardHolder div").data("cardInfo");
 		showCard(nextCard);
 	}).css({
-		"-webkit-transform": "translate3d(-33.3%,0,0)"
+		"-webkit-transform": "translate3d(-33.3%,0,0)",
+		"transform": "translate3d(-33.3%,0,0)"
 	});
 	console.log('slideLeft: end');
 }
@@ -108,7 +111,8 @@ function pageSlideRight(){
 		var previousCard = $("#previousCardHolder div").data("cardInfo");
 		showCard(previousCard);
 	}).css({
-		"-webkit-transform": "translate3d(33.3%,0,0)"
+		"-webkit-transform": "translate3d(33.3%,0,0)",
+		"transform": "translate3d(-33.3%,0,0)"
 	});
 }
 function loadCards(){

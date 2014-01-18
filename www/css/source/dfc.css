@@ -33,4 +33,5 @@ page{
 }*/
 .slide-animation{
 	transition: -webkit-transform .250s ease-out;
+	transition: transform .250s ease-out;
 }
