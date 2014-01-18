@@ -72,8 +72,6 @@ function pageSlideLeft(){
 	console.log('slideLeft');
 	$("pagenavigator").one("transitionend webkitTransitionEnd MSTransitionEnd oTransitionEnd", function(event){
 		var nextCard = $("#nextCardHolder div").data("cardInfo");
-		console.log(nextCard);
-		
 		showCard(nextCard);
 	}).css({
 		"-webkit-transform": "translate3d(-33.3%,0,0)"
@@ -83,8 +81,6 @@ function pageSlideRight(){
 	console.log('slideRight');
 	$("pagenavigator").one("transitionend webkitTransitionnEnd MSTransitionEnd oTransitionEnd", function(event){
 		var previousCard = $("#previousCardHolder div").data("cardInfo");
-		console.log(previousCard);
-		
 		showCard(previousCard);
 	}).css({
 		"-webkit-transform": "translate3d(33.3%,0,0)"
