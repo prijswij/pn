@@ -71,6 +71,7 @@ function pageSlideReset(){
 function pageSlideLeft(){
 	console.log('slideLeft');
 	$("pagenavigator").one("transitionend webkitTransitionEnd MSTransitionEnd oTransitionEnd", function(event){
+		console.log("transition ended");
 		var nextCard = $("#nextCardHolder div").data("cardInfo");
 		showCard(nextCard);
 	}).css({
@@ -80,6 +81,7 @@ function pageSlideLeft(){
 function pageSlideRight(){
 	console.log('slideRight');
 	$("pagenavigator").one("transitionend webkitTransitionnEnd MSTransitionEnd oTransitionEnd", function(event){
+		console.log("transition ended");
 		var previousCard = $("#previousCardHolder div").data("cardInfo");
 		showCard(previousCard);
 	}).css({
