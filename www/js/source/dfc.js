@@ -102,18 +102,18 @@ function pageSlideLeft(){
 		showCard(nextCard);
 	}, false);*/
 	
-	$("pagenavigator").one(window.transitionEnd, function(event){
-		event.stopPropagation();
-		event.preventDefault();
-		//console.log("transition ended");
-		var nextCard = $("#nextCardHolder div").data("cardInfo");
-		showCard(nextCard);
-	}).css({
+	$("pagenavigator").css({
 		"transform": "translate3d(-33.3%,0,0)",
 		"-webkit-transform": "translate3d(-33.3%,0,0)",
 		"-moz-transform": "translate3d(-33.3%,0,0)",
 		"-ms-transform": "translate3d(-33.3%,0,0)",
 		"-o-transform": "translate3d(-33.3%,0,0)"
+	}).one(window.transitionEnd, function(event){
+		event.stopPropagation();
+		event.preventDefault();
+		//console.log("transition ended");
+		var nextCard = $("#nextCardHolder div").data("cardInfo");
+		showCard(nextCard);
 	});
 	//console.log('slideLeft: end');
 }
