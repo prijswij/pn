@@ -86,6 +86,12 @@ function pageSlideReset(){
 }
 function pageSlideLeft(){
 	console.log('slideLeft');
+	(document.getElementById('pagenavigator')).addEventListener(window.transitionEnd, function(event){
+		console.log("addeventlistener transition ended");
+		var nextCard = $("#nextCardHolder div").data("cardInfo");
+		showCard(nextCard);
+	}, false);
+	
 	$("pagenavigator").one(window.transitionEnd, function(event){
 		console.log("transition ended");
 		var nextCard = $("#nextCardHolder div").data("cardInfo");
