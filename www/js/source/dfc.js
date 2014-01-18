@@ -115,7 +115,7 @@ function showCard(cardInfo){
 		previousCardIndex 	= mainCardIndex-1;
 	
 	$("pagenavigator").removeClass("slide-animation"); //disable animation
-	console.log("showCards : ", previousIndex, mainIndex, nextIndex);
+	//console.log("showCards : ", previousIndex, mainIndex, nextIndex);
 	switch (cardInfo){
 		case $("#nextCardHolder").data("cardInfo"):		//next card is selected
 				$("#preloader").append($("#previous div"));	//store in carddeck
