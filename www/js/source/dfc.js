@@ -9,10 +9,26 @@ $(function(){
 		startTimer	: null
 	};
 	$("pagenavigator").on("touchstart", touchDownHandle);
-
+	windows.transitionEnd = whichTransitionEvent(document.getElementById('pagenavigator'));
 	loadCards();
 	
 });
+
+function whichTransitionEvent(el){
+    var t;
+    var transitions = {
+      'transition':'transitionend',
+      'OTransition':'oTransitionEnd',
+      'MozTransition':'transitionend',
+      'WebkitTransition':'webkitTransitionEnd'
+    }
+
+    for(t in transitions){
+        if( el.style[t] !== undefined ){
+            return transitions[t];
+        }
+    }
+}
 
 function touchDownHandle(event){
 	event.preventDefault();
@@ -70,7 +86,7 @@ function pageSlideReset(){
 }
 function pageSlideLeft(){
 	console.log('slideLeft');
-	$("pagenavigator").one("transitionend webkitTransitionEnd MSTransitionEnd oTransitionEnd", function(event){
+	$("pagenavigator").one(windows.transitionEnd, function(event){
 		console.log("transition ended");
 		var nextCard = $("#nextCardHolder div").data("cardInfo");
 		showCard(nextCard);
@@ -80,7 +96,7 @@ function pageSlideLeft(){
 }
 function pageSlideRight(){
 	console.log('slideRight');
-	$("pagenavigator").one("transitionend webkitTransitionnEnd MSTransitionEnd oTransitionEnd", function(event){
+	$("pagenavigator").one(windows.transitionEnd, function(event){
 		console.log("transition ended");
 		var previousCard = $("#previousCardHolder div").data("cardInfo");
 		showCard(previousCard);
