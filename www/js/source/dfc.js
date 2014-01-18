@@ -93,6 +93,7 @@ function pageSlideLeft(){
 	}).css({
 		"-webkit-transform": "translate3d(-33.3%,0,0)"
 	});
+	console.log('slideLeft: end');
 }
 function pageSlideRight(){
 	console.log('slideRight');
