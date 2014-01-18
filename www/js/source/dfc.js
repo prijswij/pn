@@ -69,6 +69,7 @@ function pageSlideReset(){
 	});
 }
 function pageSlideLeft(){
+	console.log('slideLeft');
 	$("pagenavigator").one("transitionend webkitTransitionEnd MSTransitionEnd oTransitionEnd", function(event){
 		var nextCard = $("#nextCardHolder div").data("cardInfo");
 		console.log(nextCard);
@@ -79,6 +80,7 @@ function pageSlideLeft(){
 	});
 }
 function pageSlideRight(){
+	console.log('slideRight');
 	$("pagenavigator").one("transitionend webkitTransitionnEnd MSTransitionEnd oTransitionEnd", function(event){
 		var previousCard = $("#previousCardHolder div").data("cardInfo");
 		console.log(previousCard);
@@ -107,12 +109,13 @@ function loadCards(){
 }
 
 function showCard(cardInfo){
+	console.log("showCard");
 	var mainCardIndex		= cards.indexOf(cardInfo),
 		nextCardIndex 		= mainCardIndex+1 > cards.length ? -1 : mainCardIndex+1,
 		previousCardIndex 	= mainCardIndex-1;
 	
 	$("pagenavigator").removeClass("slide-animation"); //disable animation
-	
+	console.log("showCards : ", previousIndex, mainIndex, nextIndex);
 	switch (cardInfo){
 		case $("#nextCardHolder").data("cardInfo"):		//next card is selected
 				$("#preloader").append($("#previous div"));	//store in carddeck
@@ -145,92 +148,6 @@ function showCard(cardInfo){
 	}
 	
 }
-/*function showCard(cardInfo){
-	console.log('showCard');
-	$("pagenavigator").removeClass("slide-animation");
-	
-	var $main = $("#main");
-	var $next = $("#next");
-	var $previous = $("#previous");
-	
-	var $mainCard = $("#main div");
-	var $nextCard = $("#next div");
-	var $previousCard = $("#previous div");
-	
-	var mainIndex = cards.indexOf(cardInfo);
-	var previousIndex = mainIndex - 1;
-	var nextIndex = mainIndex + 1;
-	
-	var previousCardInfo = cards[previousIndex];
-	var nextCardInfo = cards[nextIndex];
-	
-	console.log(cardInfo.id, $main.data("cardInfo"));
-	try{
-		switch(cardInfo){
-		case $main.data("cardInfo"):
-				
-			break;
-		case $next.data("cardInfo"):
-				$previous.append($mainCard);
-				$main.append($nextCard);
-				pageSlideReset();
-				if (nextIndex <= cards.length) {
-					$nextCard.css({
-						'background-image': 'url('+nextCardInfo.image+')'
-					});
-				} else {
-					$nextCard.css({
-						'background-image': ''
-					});
-				}
-			break;
-		case $previous.data("cardInfo"):
-				$next.append($mainCard);
-				$main.append($previousCard);
-				pageSlideReset();
-				if (previousIndex >= 0) {
-					$previousCard.css({
-						'background-image': 'url('+previousCardInfo.image+')'
-					});
-				} else {
-					$previousCard.css({
-						'background-image': ''
-					});
-				}
-			break;
-		default:
-				$mainCard.css({
-					'background-image': 'url('+cardInfo.image+')'
-				});
-				pageSlideReset();
-				$nextCard.css({
-					'background-image': 'url('+ (nextCardInfo != undefined ? nextCardInfo.image : '') +')'
-				});
-				$previousCard.css({
-					'background-image': 'url('+ (previousCardInfo != undefined ? previousCardInfo.image : '')+')'
-				});
-			break;
-		}
-	} catch(err){
-		$mainCard.css({
-			'background-image': 'url('+cardInfo.image+')'
-		});
-		pageSlideReset();
-		$nextCard.css({
-			'background-image': 'url('+ (nextCardInfo != undefined ? nextCardInfo.image : '') +')'
-		});
-		$previousCard.css({
-			'background-image': 'url('+ (previousCardInfo != undefined ? previousCardInfo.image : '')+')'
-		});	
-	}
-	
-	$main.data("cardInfo", cardInfo);
-	$next.data("cardInfo", nextCardInfo);
-	$previous.data("cardInfo", previousCardInfo);
-
-};*/
-
-
 
 function processCardData(){
 	console.log('processCardData')
