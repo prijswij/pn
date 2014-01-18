@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<!--<link rel="stylesheet" href="framework/jqm/css/jquery.mobile-1.4.0.min.css" />-->
+		<link rel="stylesheet" href="framework/purecss/css/pure-min.css" />
+		<link rel="stylesheet" href="framework/purecss/css/side-menu.css" />
+		<link rel="stylesheet" href="css/source/dfc.css" />
+        <title>Dreamfactory Cards</title>
+		<style>
+			#layout{
+				height: 100%;
+			}
+			#main{
+				position:relative;
+				display:block;
+				height: 100%;
+				overflow: hidden;
+				box-shadow: -10px 0px 15px rgba(0,0,0,.5);
+				z-index: 1
+			}
+			.block{
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+
+		</style>
+    </head>
+    <body>
+		<div id="layout">
+			<a href="#menu" id="menuLink" class="menu-link">
+				<!-- Hamburger icon -->
+				<span></span>
+			</a>
+			<div id="menu">
+				<div class="pure-menu pure-menu-open" id="cardsnavigation">
+					<a class="pure-menu-heading">Dreamfactory</a>
+					<ul>
+					</ul>
+				</div>
+			</div>
+			<div id="main">
+				<pagenavigator>
+					<page role="page" id="previousCardHolder">
+					</page>
+					<page role="page" id="mainCardHolder">
+						<div class="block">
+							<h1>Welkom bij de dreamfactory kaarten app</h1>
+							<p>af sdf fejrfkf kjrf kj fqjf f qkjf kjf kj kj qkf qkf j frjg lqk glwejg wl qlvgkqe rlqj fl flf k............</p>
+						</div>
+					</page>
+					<page role="page" id="nextCardHolder">
+
+					</page>
+				</pagenavigator>
+			</div>
+		</div>
+		<div id="preloader" style="display:none">
+		</div>
+		<!--<script type="text/javascript" src="cordova.js"></script>-->
+		<script type="text/javascript" src="framework/jquery/jquery-2.0.3.min.js"></script>
+		<!--<script src="framework/jqm/js/jquery.mobile-1.4.0.min.js"></script>-->
+		<script src="framework/purecss/js/ui.js"></script>
+		<script src="js/source/dfc.js"></script>
+    </body>
+</html>

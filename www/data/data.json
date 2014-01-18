@@ -1,0 +1,197 @@
+{
+	"kaarten"	: [
+		{
+			"id" 			: "kaart1",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart1V.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart2",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart1A.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart3",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart2V.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart4",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart2A.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart5",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart3V.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart6",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart3A.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart7",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart4V.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart8",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart4A.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart9",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart5V.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart10",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart5A.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart11",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart6V.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart12",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart6A.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart13",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart7V.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart14",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart7A.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart15",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart8V.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart16",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart8A.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart17",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart9V.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart18",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart9A.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart19",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart10V.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart20",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart10A.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart21",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart11V.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart22",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart11A.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart23",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart12V.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart24",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart12A.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart25",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart13V.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart26",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart13A.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart27",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart14V.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart28",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart14A.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart29",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart15V.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart30",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart15A.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart31",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart16V.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		},
+		{
+			"id" 			: "kaart32",
+			"titel" 		: "Opdrachtgever gezocht / Inhoudsopgave",
+			"image"			: "data/kaarten/kaart16A.png",
+			"omschrijving"	: "Acquireren als onderdeel van je werk"
+		}
+
+	]
+}
