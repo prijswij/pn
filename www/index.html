@@ -2,272 +2,67 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <!-- <meta name="format-detection" content="telephone=no" /> -->
-		<!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />-->
-		<!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
-		<link rel="stylesheet" href="css/df.min.css" />
-
-		<style>
-			@media ( min-width: 35em ) {
-
-				/* wrap on wide viewports once open */
-
-				.ui-panel-page-content-open.ui-panel-page-content-position-left {
-					margin-right: 17em;
-				}
-				.ui-panel-page-content-open.ui-panel-page-content-position-right {
-					margin-left: 17em;
-				}
-				.ui-panel-page-content-open {
-					width: auto;
-				}
-
-				/* disable "dismiss" on wide viewports */
-				.ui-panel-dismiss {
-					display: none;
-				}
-
-				/* same as the above but for panels with display mode "push" only */
-
-				.ui-panel-page-content-open.ui-panel-page-content-position-left.ui-panel-page-content-display-push {
-					margin-right: 17em;
-				}
-				.ui-panel-page-content-open.ui-panel-page-content-position-right.ui-panel-page-content-display-push {
-					margin-left: 17em;
-				}
-				.ui-panel-page-content-open.ui-panel-page-content-display-push {
-					width: auto;
-				}
-
-				.ui-panel-dismiss-display-push {
-					display: none;
-				}
-			}
-			
-			.ui-panel.ui-panel-open {
-				position:fixed;
-				bottom: 0px;
-			}
-			 
-			.ui-panel .ui-panel-inner {
-				position:absolute;
-				top:0px;
-				bottom:0px;
-				left:0px;
-				right:0px;
-				overflow-y: auto;
-				overflow-x:hidden;
-			}
-			
-			.card-container{
-				position: absolute;
-				top: 60px;
-				bottom: 20px;
-				left: 20px;
-				right: 20px;
-				text-align: center;
-			}
-			
-			.card-container img{
-				box-shadow: 0px 5px 10px rgba(64,64,64,.5);
-			}
-			
-			::-webkit-scrollbar {
-				width: 6px;
-				background: transparent;
-			}
-			::-webkit-scrollbar-track {
-				background: rgba(128,128,128,.25); 
-			}
-			 
-			::-webkit-scrollbar-thumb {
-				background: rgba(64,64,64,.25);
-				width: 4px;
-				margin: 1px;
-				border-radius: 2px; 
-			}
-			#hdrtest{
-				position:fixed;
-			}
-		</style>
+		<!--<link rel="stylesheet" href="framework/jqm/css/jquery.mobile-1.4.0.min.css" />-->
+		<link rel="stylesheet" href="framework/purecss/css/pure-min.css" />
+		<link rel="stylesheet" href="framework/purecss/css/side-menu.css" />
+		<link rel="stylesheet" href="css/source/dfc.css" />
         <title>Dreamfactory Cards</title>
+		<style>
+			#layout{
+				height: 100%;
+			}
+			#main{
+				position:relative;
+				display:block;
+				height: 100%;
+				overflow: hidden;
+				box-shadow: -10px 0px 15px rgba(0,0,0,.5);
+				z-index: 1
+			}
+			.block{
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+
+		</style>
     </head>
     <body>
-		<div data-role="page" class="ui-panel-responsive" data-transition='flow'>		
-			<div data-role="header" data-position="fixed" data-fullscreen="true" data-tap-toggle="false" role="banner">
-				<h1 role="heading" aria-level="1">Opdrachtgever gezocht</h1>
-				<a href="#cards" data-role="button" data-icon="bars" data-iconpos="notext" class="ui-btn-icon-notext" data-iconshadow="false" role="button">Menu</a>
-				<a href="#debug" data-role="button" data-icon="info" data-iconpos="notext" class="ui-btn-icon-notext" data-iconshadow="false" role="button">debug</a>
+		<div id="layout">
+			<a href="#menu" id="menuLink" class="menu-link">
+				<!-- Hamburger icon -->
+				<span></span>
+			</a>
+			<div id="menu">
+				<div class="pure-menu pure-menu-open" id="cardsnavigation">
+					<a class="pure-menu-heading">Dreamfactory</a>
+					<ul>
+					</ul>
 				</div>
-			<div role="main" data-role="content">
-				<h1>Opdrachtgever gezocht</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae vehicula nulla. Aliquam ut gravida enim, in ultricies sapien. Duis quis luctus nisi. Nullam posuere in libero ac mattis. Mauris sit amet convallis odio. Pellentesque nec malesuada nisi. Donec nibh orci, vehicula at turpis a, sagittis aliquet erat. Praesent porta, dolor at elementum pulvinar, leo quam tincidunt purus, in tempus libero orci et libero. Phasellus aliquam rutrum consectetur. Suspendisse quis volutpat libero, quis suscipit purus. Nam tempor felis velit, eu porttitor tellus aliquet a.</p>
 			</div>
-			<div data-role="footer" data-position="fixed" role="banner"><h2 role="heading">footer</h2></div>
+			<div id="main">
+				<pagenavigator>
+					<page role="page" id="previousCardHolder">
+					</page>
+					<page role="page" id="mainCardHolder">
+						<div class="block">
+							<h1>Welkom bij de dreamfactory kaarten app</h1>
+							<p>af sdf fejrfkf kjrf kj fqjf f qkjf kjf kj kj qkf qkf j frjg lqk glwejg wl qlvgkqe rlqj fl flf k............</p>
+						</div>
+					</page>
+					<page role="page" id="nextCardHolder">
+
+					</page>
+				</pagenavigator>
+			</div>
 		</div>
-		<div data-role="panel" data-position-fixed="true" data-position="left" data-display="reveal" data-theme="a" data-dismissible="false" class="cardsNavigation" id="cards">
-			<ul data-role="listview">
-				<li data-icon="delete"><a href="#" data-rel="close">Close navigation</a></li>
-				<!--<li data-icon="false"><a href="#">Apple</a></li>
-				<li data-icon="false"><a href="#">Banana</a></li>
-				<li data-icon="false"><a href="#">Cherry</a></li>
-				<li data-icon="false"><a href="#">Cranberry</a></li>
-				<li data-icon="false"><a href="#">Grape</a></li>
-				<li data-icon="false"><a href="#">Orange</a></li>-->
-			</ul>
-
+		<div id="preloader" style="display:none">
 		</div>
-		<div data-role="panel" data-position-fixed="true" data-display="overlay" data-position="right" data-theme="a" id="debug">
-			<ul data-role="listview">
-				<li data-icon="delete"><a href="#" data-rel="close">Close debug</a></li>
-			</ul>
-
-		</div><!-- /panel -->
-		<script type="text/javascript" src="cordova.js"></script>
-		<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
-		<!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> -->
-		<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
-		<script>
-			cards = {};
-			
-			/*console.log = function(text){
-				$("#debug ul").append('<li data-icon="false"><a href="javascript:alert(\''+text+'\')">'+text+'</a></li>');
-				$("#debug ul").listview( "refresh" );
-			}*/
-			
-			$(function(){
-				$.mobile.defaultPageTransition = "slide";
-				// setup slide on swipe
-				$( document ).on( "pagecreate", "[data-role='page']", function() {
-					console.log('pagecreate');
-					var page = "#" + $( this ).attr( "id" ),
-						// Get the filename of the next page that we stored in the data-next attribute
-						next = $( this ).jqmData( "next" ),
-						// Get the filename of the previous page that we stored in the data-prev attribute
-						prev = $( this ).jqmData( "prev" );
-					// Check if we did set the data-next attribute
-					console.log(next , ", ", prev);
-					if ( next ) {
-						$( document ).on( "swipeleft", page, function() {
-							console.log('swipeleft : nextCard');
-							$.mobile.pageContainer.pagecontainer("change", "#"+next );
-							//$.mobile.changePage( "#"+next );
-						});
-					}
-					// The same for the previous page (we set data-dom-cache="true" so there is no need to prefetch)
-					if ( prev ) {
-						$( document ).on( "swiperight", page, function() {
-							console.log('swiperight : previousCard');
-							$.mobile.pageContainer.pagecontainer("change", "#"+prev , { reverse: true } );
-							//$.mobile.changePage( "#"+prev , { reverse: true } );
-						});
-
-					}
-				});					
-
-			// Bind the swipeHandler callback function to the swipe event on div.box
-			//	$( "#card" ).on( "swipeleft swiperight", initRotate );
-				
-			//	$(".cardFront").css({'background-image':'url(kaarten/kaart1V.png)'});
-			//	$(".cardBack").css({'background-image':'url(kaarten/kaart1A.png)'});
-
-				$('[data-role="panel"]').panel();
-				$('[data-role="panel"] ul').listview();
-			
-				$.getJSON("data/data.json",function(data){
-					console.log("success loading data")
-					try{
-						console.log(data.kaarten.length + "cards loaded");
-						cards = data.kaarten;
-						//setupNavigation();
-						processCardData();
-					} catch(err){
-						alert(err);
-					}
-					//app.setupNavigation();
-				})
-				.fail(function() {
-					console.log( "error loading data" );
-				}); 
-
-				
-				// Callback function references the event target and adds the 'swipe' class to it
-				function initRotate( event ){
-					console.log("initRotate");
-					var $card = $("#card"),
-						direction = event.type === "swipeleft" ? -180 : 180;
-					degrees = $card.data('rotatey') + direction;
-					$card.data('rotatey', degrees);
-					rotateCard(card, degrees);
-				}
-				function rotateCard(card, degrees){
-					$(card).css({
-						'-webkit-transform': 'rotateY( '+degrees+'deg )',
-						'-moz-transform': 'rotateY( '+degrees+'deg )',
-						'-o-transform': 'rotateY( '+degrees+'deg )',
-						'transform': 'rotateY( '+degrees+'deg )'
-					})
-				}
-				function showCard(card){
-					console.log('showCard');
-//					$("body").removeClass("largeScreen");
-//					$(".flip-container").removeClass("hover");
-					
-					$(".cardFront").css({"background-image": "url("+card.imageVoor+")"});
-					$(".cardBack").css({"background-image": "url("+card.imageAchter+")"});
-					$("#contentTitle").html(card.titel);
-					
-				};
-
-				function processCardData(){
-					console.log('processCardData')
-					var prevCardId = "", nextCardId = "";
-					$.each(cards, function(index, value){
-						if(index != cards.length-1){
-							nextCardId = cards[index+1].naam;
-						} else {
-							nextCardId = "";
-						}
-						addCardPage(value, {prev : prevCardId, next : nextCardId});
-						addCardlinkToNavigation(value);
-						prevCardId = value.naam;
-					});
-					//setTimeout( function(){$.mobile.changePage( "#"+cards[0].naam );}, 2500);
-				};
-				function addCardlinkToNavigation(card){
-					console.log('addCardlinkToNavigation')
-					//$.each(cards, function(index, value){
-					$( "<li data-icon='false'><a href='#"+card.naam+"' data-transition='fade'>"+card.titel+"</a></li>" ).appendTo( "#cards ul" );
-					var navigationItem = $("a[href='#"+card.naam+"']");
-
-					$("#cards ul").listview( "refresh" );
-					//$('[data-role=page]').trigger('pagecreate');
-					$("#cards").trigger( "updatelayout" );
-					//$("#cards ul").listview( "refresh" );
-					//showCard(cards[1]);
-				};
-				
-				function addCardPage(card, navigationPrevNext){
-					console.log('addCardPage')
-					var prev = navigationPrevNext.prev != "" ? " data-prev='"+navigationPrevNext.prev+"'" : "";
-					var next = navigationPrevNext.next != "" ? " data-next='"+navigationPrevNext.next+"'" : "";
-					// Prepare your page structure
-					var newPage = $("<div data-role='page' data-dom-cache=true data-transition='slide' id='"+card.naam+"'"+prev+next+">"+
-						"<div data-role=header data-position=fixed data-transition=none data-fullscreen=true data-tap-toggle=false role=banner aria-level='1'><h1>"+card.titel+"</h1>"+
-						'<a href="#cards" data-role="button" data-icon="bars" data-iconpos="notext" class="ui-btn-icon-notext" data-iconshadow="false" role="button">Menu</a>'+
-						'<a href="#debug" data-role="button" data-icon="info" data-iconpos="notext" class="ui-btn-icon-notext" data-iconshadow="false" role="button">debug</a></div>'+
-						"<div role=main data-role=content><div class='card-container'><img src='"+card.imageVoor+"' height='100%' /></div></div></div>");
-
-					// Append the new page into pageContainer
-					newPage.appendTo($.mobile.pageContainer).trigger( "updatelayout" );
-					newPage.trigger("updatelayout");
-					
-				};
-				
-			});
-	
-		</script>
+		<!--<script type="text/javascript" src="cordova.js"></script>-->
+		<script type="text/javascript" src="framework/jquery/jquery-2.0.3.min.js"></script>
+		<!--<script src="framework/jqm/js/jquery.mobile-1.4.0.min.js"></script>-->
+		<script src="framework/purecss/js/ui.js"></script>
+		<script src="js/source/dfc.js"></script>
     </body>
 </html>
