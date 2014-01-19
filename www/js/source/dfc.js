@@ -211,7 +211,7 @@ function processCardData(){
 function addCardlinkToNavigation(card){
 	//console.log('addCardlinkToNavigation')
 
-	$( "<li><a href='#"+card.id+"'>"+card.id+"</a></li>" ).appendTo( "#cardsnavigation ul" );
+	$( "<li><a href='#"+card.id+"'>"+card.titel+"</a></li>" ).appendTo( "#cardsnavigation ul" );
 	$("<div id='"+card.id+"' class='block' style='background-image:url("+card.image+")'>").appendTo("#preloader");
 	$("#"+card.id).data("cardInfo",card);
 

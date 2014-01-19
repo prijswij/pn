@@ -74,7 +74,7 @@ the menu have 100% height and be fixed on the page as the rest of it scrolls.
     left: 280px; /* this should be "#menu" width */
     bottom: 0;
     z-index: 1; /* so the menu or its navicon stays above all content */
-    background: #191818;
+    background: #3b1855; /*#191818;*/
     overflow-y: auto;
     -webkit-overflow-scroll: touch; /* for smooth scrolling on mobile */
 }
@@ -82,7 +82,7 @@ the menu have 100% height and be fixed on the page as the rest of it scrolls.
     All anchors inside the menu should be styled like this.
     */
     #menu a {
-        color: #999;
+        color: #fff; /*#999;*/
         border: none;
         padding: 0.6em 0 0.6em 0.6em;
     }
@@ -116,7 +116,7 @@ the menu have 100% height and be fixed on the page as the rest of it scrolls.
     */
     #menu .pure-menu-selected,
     #menu .pure-menu-heading {
-        background: #1f8dd6;
+        background: #ff6600; /*#1f8dd6;*/
     }
         /*
         This styles a link within a selected menu item `<li>`.
