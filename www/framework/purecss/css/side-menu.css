@@ -73,8 +73,8 @@ the menu have 100% height and be fixed on the page as the rest of it scrolls.
     top: 0;
     left: 280px; /* this should be "#menu" width */
     bottom: 0;
-    z-index: 1; /* so the menu or its navicon stays above all content */
-    background: #3b1855; /*#191818;*/
+    z-index: 10; /* so the menu or its navicon stays above all content */
+    background: #ff9374; /*#fa6d45; /*#191818;*/
     overflow-y: auto;
     -webkit-overflow-scroll: touch; /* for smooth scrolling on mobile */
 }
@@ -82,7 +82,7 @@ the menu have 100% height and be fixed on the page as the rest of it scrolls.
     All anchors inside the menu should be styled like this.
     */
     #menu a {
-        color: #fff; /*#999;*/
+        color: #5b2a00 /*#fff*/; /*#999;*/
         border: none;
         padding: 0.6em 0 0.6em 0.6em;
     }
@@ -101,22 +101,23 @@ the menu have 100% height and be fixed on the page as the rest of it scrolls.
     */
     #menu .pure-menu ul,
     #menu .pure-menu .menu-item-divided {
-        border-top: 1px solid #333;
+        border-top: 1px solid #ff6600;
     }
         /*
         Change color of the anchor links on hover/focus.
         */
+		#menu .pure-menu-selected,
         #menu .pure-menu li a:hover,
         #menu .pure-menu li a:focus {
-            background: #333;
+            background: #ff6600; /*#333;*/
+			color: #fff;
         }
 
     /*
     This styles the selected menu item `<li>`.
     */
-    #menu .pure-menu-selected,
     #menu .pure-menu-heading {
-        background: #ff6600; /*#1f8dd6;*/
+        background: #3b1855; /*#1f8dd6;*/
     }
         /*
         This styles a link within a selected menu item `<li>`.
@@ -212,6 +213,7 @@ Hides the menu at `767px`, but modify this based on your app's needs.
             #layout.active #menu {
                 left: 280px;
                 width: 280px;
+				
             }
 
     #menu {

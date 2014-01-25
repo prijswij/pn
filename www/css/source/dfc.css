@@ -4,14 +4,14 @@ html, body{
 	padding: 0px;
 	margin: 0px;
 }
-pagenavigator{
+.pagenavigator{
 	display: block;
 	width: 300%;
 	height: 100%;
 	position: absolute;
 	left: -100%;
 }
-page{
+.page{
 	box-sizing:border-box;
 	height: 100%;
 	width: 33.33%;
@@ -23,16 +23,21 @@ page{
 	height: 100%;
 	border:5px solid white;
 	box-sizing: border-box;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
 }
-/*.red{
-	background: #800000;
+#layout{
+	height: 100%;
 }
-.green{
-	background: #008000;
+#main{
+	position:relative;
+	display:block;
+	height: 100%;
+	overflow: hidden;
+	box-shadow: -10px 0px 15px rgba(0,0,0,.5);
+	z-index: 1
 }
-.blue{
-	background: #000080;
-}*/
 .slide-animation{
 	-webkit-transition: -webkit-transform .250s ease-out;
 	transition: transform .250s ease-out;
