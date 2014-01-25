@@ -72,7 +72,7 @@ the menu have 100% height and be fixed on the page as the rest of it scrolls.
     width: 280px;
     position: fixed;
     top: 0;
-    left: 0px; /*280px; /* this should be "#menu" width */
+    left: 280px; /* this should be "#menu" width */
     bottom: 0;
     z-index: 10; /* so the menu or its navicon stays above all content */
     background: #ff9374; /*#fa6d45; /*#191818;*/
@@ -228,6 +228,6 @@ Hides the menu at `767px`, but modify this based on your app's needs.
     }
 
     #layout.active .menu-link {
-        left: 0; /*280px;*/
+        left: 280px;
     }
 }
