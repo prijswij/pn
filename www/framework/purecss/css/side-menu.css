@@ -13,6 +13,8 @@ Add transition to containers so they can push in and out.
     -ms-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
+	-webkit-transform: translate3d(0 ,0 ,0);
+	transform: translate3d(0 ,0 ,0);
 }
 
 /*

@@ -17,46 +17,8 @@ $(function(){
 	//document.addEventListener("touchstart",touchDownHandle,false);
 	window.transitionEnd = whichTransitionEvent(document.getElementById('pagenavigator'));
 	loadCards();
-	//disable_scroll()
-	setScroll();
 });
-function setScroll(){
-$(document).bind("touchmove, mousemove",function(e){
-   e.preventDefault();
- });
 
-
-
-$('.scrollable').bind("touchmove, mousemove",function(e){
-  if ($('.scrollable')[0].scrollHeight > $('.scrollable')[0].clientHeight) {
-    e.stopPropagation();
-  } else {
-    e.preventDefault();
-  }
-});
-}
-
-function preventDefault(e) {
-  e = e || window.event;
-  if (e.preventDefault)
-      e.preventDefault();
- // e.returnValue = false;  
-}
-
-function theMouseWheel(e) {
-  preventDefault(e);
-}
-
-function disable_scroll() {
-  if (window.addEventListener) {
-      window.addEventListener('DOMMouseScroll', theMouseWheel, false);
-	 // window.addEventListener('touchstart', theMouseWheel, false);
-	  window.addEventListener('touchmove', theMouseWheel, false);
-	 // window.addEventListener('touchend', theMouseWheel, false);
-	  window.addEventListener('mousemove', theMouseWheel, false);
-  }
-  window.onmousewheel = document.onmousewheel = theMouseWheel;
-}
 
 
 
