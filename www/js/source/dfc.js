@@ -17,9 +17,24 @@ $(function(){
 	//document.addEventListener("touchstart",touchDownHandle,false);
 	window.transitionEnd = whichTransitionEvent(document.getElementById('pagenavigator'));
 	loadCards();
-	disable_scroll()
-	
+	//disable_scroll()
+	setScroll();
 });
+function setScroll(){
+$(document).bind("touchmove",function(e){
+   e.preventDefault();
+ });
+
+
+
+$('.scrollable').bind("touchmove",function(e){
+  if ($('.scrollable')[0].scrollHeight > $('.scrollable')[0].clientHeight) {
+    e.stopPropagation();
+  } else {
+    e.preventDefault();
+  }
+});
+}
 
 function preventDefault(e) {
   e = e || window.event;
