@@ -8,12 +8,14 @@ Add transition to containers so they can push in and out.
 #layout,
 #menu,
 .menu-link {
-    -webkit-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
 	-webkit-transform: preserve-3d;
 	transform: preserve-3d;
-	/*-webkit-transform: translate3d(0 ,0 ,0);
-	transform: translate3d(0 ,0 ,0);*/
+  /* -webkit-transform: translateZ(-100);
+   transform: translateZ(-100);*/
+	-webkit-transform: translate3d(0 ,0 ,-100);
+	transform: translate3d(0 ,0 ,-100);
 }
 
 /*
