@@ -11,7 +11,12 @@ $(function(){
 	//$("#pagenavigator").on("touchstart", touchDownHandle)
 	var pagenavigator = document.getElementById("pagenavigator");
 	pagenavigator.addEventListener("touchstart",touchDownHandle,false);
+	pagenavigator.addEventListener("click",function(e){
+		e.stopPropagation();
+		e.preventDefault();
+	},true);
 	$("body").on("scroll",function(e){
+		e.stopPropagation();
 		e.preventDefault();
 	});
 	//document.addEventListener("touchstart",touchDownHandle,false);
@@ -98,9 +103,6 @@ function touchUpHandle(event){
 	} else {
 		preformPageSlide(movePercent);
 	};
-	
-	//$("#pagenavigator").off("touchmove", touchMoveHandle);
-	//document.addEventListener("touchstart",touchDownHandle,false);
 };
 
 function preformPageSlide(movePercent){
@@ -115,26 +117,13 @@ function preformPageSlide(movePercent){
 function pageSlideReset(){
 	$("#pagenavigator").css({
 		"transform": "translate3d(0,0,0)",
-		"-webkit-transform": "translate3d(0,0,0)",
-		"-moz-transform": "translate3d(0,0,0)",
-		"-ms-transform": "translate3d(0,0,0)",
-		"-o-transform": "translate3d(0,0,0)"
+		"-webkit-transform": "translate3d(0,0,0)"
 	});
 }
-function pageSlideLeft(){
-	////console.log('slideLeft');
-/*	(document.getElementById('pagenavigator')).addEventListener(window.transitionEnd, function(event){
-		////console.log("addeventlistener transition ended");
-		var nextCard = $("#nextCardHolder div").data("cardInfo");
-		showCard(nextCard);
-	}, false);*/
-	
+function pageSlideLeft(){	
 	$("#pagenavigator").css({
 		"transform": "translate3d(-33.3%,0,0)",
-		"-webkit-transform": "translate3d(-33.3%,0,0)",
-		"-moz-transform": "translate3d(-33.3%,0,0)",
-		"-ms-transform": "translate3d(-33.3%,0,0)",
-		"-o-transform": "translate3d(-33.3%,0,0)"
+		"-webkit-transform": "translate3d(-33.3%,0,0)"
 	}).one(window.transitionEnd, function(event){
 		event.stopPropagation();
 		event.preventDefault();
@@ -154,10 +143,7 @@ function pageSlideRight(){
 		showCard(previousCard);
 	}).css({
 		"transform": "translate3d(33.3%,0,0)",
-		"-webkit-transform": "translate3d(33.3%,0,0)",
-		"-moz-transform": "translate3d(33.3%,0,0)",
-		"-ms-transform": "translate3d(33.3%,0,0)",
-		"-o-transform": "translate3d(33.3%,0,0)"
+		"-webkit-transform": "translate3d(33.3%,0,0)"
 	});
 }
 function loadCards(){
@@ -253,6 +239,7 @@ function loadCard(event){
 	event.stopPropagation();
 	//console.log('click', event);
 	showCard($($(event.target).attr('href')).data("cardInfo"));
+	$('#layout, #menu, #menulink').toggleClass('active');
 }
 
 
