@@ -23,10 +23,16 @@
         element.className = classes.join(' ');
     }*/
 	$('#menuLink').on('touchend',function (e) {
-        console.log("touch")
-
+        e.stopPropagation();
         e.preventDefault();
         $('#layout, #menu, #menulink').toggleClass('active');
+/*		if($('#layout').hasClass('active')){
+			var pagenavigator = document.getElementById("pagenavigator");
+			pagenavigator.removeEventListener("touchstart",touchDownHandle);
+		}else {
+			var pagenavigator = document.getElementById("pagenavigator");
+			pagenavigator.addEventListener("touchstart",touchDownHandle,false);
+		}*/
     });
   /*  menuLink.onclick = function (e) {
         var active = 'active';

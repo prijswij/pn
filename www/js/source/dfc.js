@@ -11,11 +11,39 @@ $(function(){
 	//$("#pagenavigator").on("touchstart", touchDownHandle)
 	var pagenavigator = document.getElementById("pagenavigator");
 	pagenavigator.addEventListener("touchstart",touchDownHandle,false);
+	$("body").on("scroll",function(e){
+		e.preventDefault();
+	});
 	//document.addEventListener("touchstart",touchDownHandle,false);
 	window.transitionEnd = whichTransitionEvent(document.getElementById('pagenavigator'));
 	loadCards();
+	disable_scroll()
 	
 });
+
+function preventDefault(e) {
+  e = e || window.event;
+  if (e.preventDefault)
+      e.preventDefault();
+ // e.returnValue = false;  
+}
+
+function theMouseWheel(e) {
+  preventDefault(e);
+}
+
+function disable_scroll() {
+  if (window.addEventListener) {
+      window.addEventListener('DOMMouseScroll', theMouseWheel, false);
+	 // window.addEventListener('touchstart', theMouseWheel, false);
+	  window.addEventListener('touchmove', theMouseWheel, false);
+	 // window.addEventListener('touchend', theMouseWheel, false);
+	  window.addEventListener('mousemove', theMouseWheel, false);
+  }
+  window.onmousewheel = document.onmousewheel = theMouseWheel;
+}
+
+
 
 function whichTransitionEvent(el){
     var t;
