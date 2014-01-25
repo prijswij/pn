@@ -12,8 +12,8 @@ Add transition to containers so they can push in and out.
     transition: all 0.2s ease-out;
 	-webkit-transform: preserve-3d;
 	transform: preserve-3d;
-	-webkit-transform: translate3d(0 ,0 ,0);
-	transform: translate3d(0 ,0 ,0);
+	/*-webkit-transform: translate3d(0 ,0 ,0);
+	transform: translate3d(0 ,0 ,0);*/
 }
 
 /*
@@ -214,7 +214,6 @@ Hides the menu at `767px`, but modify this based on your app's needs.
             #layout.active #menu {
                 left: 280px;
                 width: 280px;
-				
             }
 
     #menu {
@@ -228,6 +227,6 @@ Hides the menu at `767px`, but modify this based on your app's needs.
     }
 
     #layout.active .menu-link {
-        left: 0px; /*280px;*/
+        left: 280px;
     }
 }
