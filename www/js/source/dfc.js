@@ -87,22 +87,27 @@ function touchUpHandle(event){
 	pagenavigator.removeEventListener("touchmove",touchMoveHandle);
 	pagenavigator.removeEventListener("touchend",touchUpHandle);
 	
-	var distance = (pageNavigatorTouch.end.pageX - pageNavigatorTouch.start.pageX);
-	//console.log("distance : " + distance);
-	movePercent = (distance / viewport.width) * 100;
-	//swipe or slide
-	isSwipe = ((Date.now() - pageNavigatorTouch.startTimer) < 250) && (Math.abs(distance) > 75) ? true : false;
-	////console.log("=> movePercent : ", movePercent);
-	$("#pagenavigator").addClass("slide-animation");
-	if (Math.abs(movePercent) < 40){
-		if(isSwipe){
+	try{
+		var distance = (pageNavigatorTouch.end.pageX - pageNavigatorTouch.start.pageX);
+		//console.log("distance : " + distance);
+		movePercent = (distance / viewport.width) * 100;
+		//swipe or slide
+		isSwipe = ((Date.now() - pageNavigatorTouch.startTimer) < 250) && (Math.abs(distance) > 75) ? true : false;
+		////console.log("=> movePercent : ", movePercent);
+		$("#pagenavigator").addClass("slide-animation");
+		if (Math.abs(movePercent) < 40){
+			if(isSwipe){
+				preformPageSlide(movePercent);
+			}else{
+				pageSlideReset();
+			}
+		} else {
 			preformPageSlide(movePercent);
-		}else{
-			pageSlideReset();
-		}
-	} else {
-		preformPageSlide(movePercent);
-	};
+		};
+		pageNavigatorTouch.end = pageNavigatorTouch.start = null;
+	} catch(e){
+	
+	}
 };
 
 function preformPageSlide(movePercent){
