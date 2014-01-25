@@ -21,13 +21,13 @@ $(function(){
 	setScroll();
 });
 function setScroll(){
-$(document).bind("touchmove",function(e){
+$(document).bind("touchmove, mousemove",function(e){
    e.preventDefault();
  });
 
 
 
-$('.scrollable').bind("touchmove",function(e){
+$('.scrollable').bind("touchmove, mousemove",function(e){
   if ($('.scrollable')[0].scrollHeight > $('.scrollable')[0].clientHeight) {
     e.stopPropagation();
   } else {
