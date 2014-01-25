@@ -212,7 +212,7 @@ Hides the menu at `767px`, but modify this based on your app's needs.
             left: 280px;
         }
             #layout.active #menu {
-                left: 0px; /*280px;*/
+                left: 280px;
                 width: 280px;
 				
             }
