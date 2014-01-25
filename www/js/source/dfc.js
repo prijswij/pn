@@ -238,8 +238,10 @@ function loadCard(event){
 	event.preventDefault();
 	event.stopPropagation();
 	//console.log('click', event);
-	showCard($($(event.target).attr('href')).data("cardInfo"));
-	$('#layout, #menu, #menulink').toggleClass('active');
+	if($('#layout').hasClass('active')){
+		showCard($($(event.target).attr('href')).data("cardInfo"));
+		$('#layout, #menu, #menulink').toggleClass('active');
+	}
 }
 
 
